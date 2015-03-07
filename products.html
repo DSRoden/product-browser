@@ -1,6 +1,23 @@
 
 <div class="products-page">
-  <div class="products-container">
-    <h5>{{products.title}}</h5>
+  <div class="products-navbar col-group no-padding">
+    <div class="col-mb-4 col-4">
+      <h3 ng-click="openFilter()">FILTER<i class="fa fa-filter icons"></i></h3>
+    </div>
+    <div class="col-mb-4 col-4">
+      <h3 ng-click="resetFilters()">ALL <i class="fa fa-th-large icons"></i></h3>
+    </div>
+    <div class="col-mb-4 col-4">
+      <h3 ng-click="showBookmarked()">SAVED<i class="fa fa-bookmark icons"></i></h3>
+    </div>
   </div>
+  <div class="products-searchbar col-group no-padding">
+    <div class="col-mb-2 col-1 no-padding">
+      <div ng-click="search(searchTerm)" class="search-icon-container"></div>
+    </div>
+    <div class="col-mb-10 col-11 no-padding">
+      <input type="text" placeholder="Search by product name" ng-model="searchTerm">
+    </div>
+  </div>
+  <div class="products-container"></div>
 </div>

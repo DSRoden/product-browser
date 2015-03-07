@@ -1,0 +1,50 @@
+@themeColor1 : #588C7E;
+@themeColor2 : #F2E394;
+@themeColor3 : #F2AE72;
+
+
+/* --- Break Points --- */
+
+@screenTablet:  768px;
+@screenDesktop: 1000px;
+@screenLarge:   1940px;
+
+
+@media all and (min-width: 241px) and (max-width: 480px) {
+
+  .col-mb-4, .col-4 {
+    height: 50px ! important;
+
+    h3 {
+      font-size: 12px ! important;
+      line-height: 2em ! important;
+    }
+  }
+
+
+  .products-searchbar input {
+    margin-top: 50px ! important;
+    width: 100% ! important;
+    padding: 10px ! important;
+    font-size: 12px ! important;
+    font-family: 'Roboto', sans-serif ! important;
+    text-align: center ! important;
+    height: 30px ! important;
+  }
+
+
+  .search-icon-container {
+      margin-top: 50px ! important;
+      background: @themeColor2 ! important;
+      padding: 10px ! important;
+      text-align: center ! important;
+      cursor: pointer ! important;
+      height: 35px ! important;
+      line-height: 30px ! important;
+  }
+
+  .search-icon-container:after {
+    font-size: 16px !important;
+  }
+
+}

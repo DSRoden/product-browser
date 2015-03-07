@@ -1,3 +1,19 @@
 .products-page
+  .products-navbar.col-group.no-padding
+    .col-mb-4.col-4
+      h3(ng-click="openFilter()") FILTER
+        i.fa.fa-filter.icons
+    .col-mb-4.col-4
+      h3(ng-click="resetFilters()") ALL 
+        i.fa.fa-th-large.icons
+    .col-mb-4.col-4
+      h3(ng-click="showBookmarked()") SAVED
+        i.fa.fa-bookmark.icons
+  .products-searchbar.col-group.no-padding
+    .col-mb-2.col-1.no-padding
+      .search-icon-container(ng-click="search(searchTerm)")
+    .col-mb-10.col-11.no-padding
+      input(type="text" placeholder="Search by product name" ng-model="searchTerm")
+    
+
   .products-container
-    h5 {{products.title}}
