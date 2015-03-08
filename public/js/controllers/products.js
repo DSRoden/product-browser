@@ -33,9 +33,24 @@
       }
     };
 
-    //RESET TO ALL
+    //RESET TO SHOW ALL PRODUCTS BUT KEEPING BOOKMARKED STATES, UNFINISHED
     scope.resetFilters = function(){
       scope.getProductInfo();
+      scope.tempArray = _.map(scope.products, function(product){
+        for(var i = 0; i < scope.bookmarks.length; i++){
+          if(product.itemId[0] === scope.bookmarks[i].itemId[0]){
+            console.log('product being stamped>>>>', product);
+            product.bookmarked = true;
+            return product;
+          } else { 
+            return product; 
+          }
+        }
+      });
+      // recreate the array in a timeout due to http request
+      $timeout(function(){
+        scope.products = scope.tempArray;
+      }, 1000);
       scope.bookmarkedProducts = false;
     };
 
