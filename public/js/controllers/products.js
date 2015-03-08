@@ -33,17 +33,17 @@
       }
     };
 
-    //RESET TO SHOW ALL PRODUCTS BUT KEEPING BOOKMARKED STATES, UNFINISHED
+    //RESET TO SHOW ALL PRODUCTS BUT KEEPING BOOKMARKED STATES
     scope.resetFilters = function(){
       scope.getProductInfo();
+      scope.bookmarkedProducts = false;
       scope.tempArray = _.map(scope.products, function(product){
         for(var i = 0; i < scope.bookmarks.length; i++){
           if(product.itemId[0] === scope.bookmarks[i].itemId[0]){
-            console.log('product being stamped>>>>', product);
             product.bookmarked = true;
             return product;
-          } else { 
-            return product; 
+          } else {
+            return product;
           }
         }
       });
@@ -51,7 +51,6 @@
       $timeout(function(){
         scope.products = scope.tempArray;
       }, 1000);
-      scope.bookmarkedProducts = false;
     };
 
     //SORT BY PRICE
@@ -65,7 +64,7 @@
     //FILTER TOP SELLERS
     scope.highestUserRating = function(){
       scope.topSellers = _.filter(scope.products, function(product){
-        return product.sellerInfo[0].topRatedSeller[0] === "true";
+        return product.sellerInfo[0].topRatedSeller[0] === 'true';
       });
       scope.products = scope.topSellers;
     };
