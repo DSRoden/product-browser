@@ -29,45 +29,73 @@
     }
   }
 
+  .col-filter {
+    background: #333 ! important;
+    border-bottom: none ! important;
+  }
+
 
   // SEARCHBAR
+    //
+    // .products-searchbar {
+    //   position: fixed;
+    //   z-index: 4;
+    //   top: 70px;
+    //   width: 100%;
+    // }
+    //
+    // .products-searchbar input {
+    //   width: 100%;
+    //   height: 50px;
+    //   padding: 10px;
+    //   font-size: 16px;
+    //   font-family: 'Roboto', sans-serif;
+    //   text-align: left;
+    // }
+    //
+    //
+    // .products-searchbar input:focus {
+    //   outline: none ! important;
+    // }
+    //
+    // .search-icon-container {
+    //   background: @themeColor3;
+    //   height: 52px;
+    //   padding: 10px;
+    //   text-align: center;
+    //   line-height: 50px;
+    //   cursor: pointer;
+    // }
+    //
+    // .search-icon-container:after {
+    //   font-family: FontAwesome;
+    //   content: '\f002';
+    //   font-size: 25px;
+    // }
 
-    .products-searchbar {
+
+    //PRODUCT FILTER-BAR
+
+    .products-filterbar {
       position: fixed;
       z-index: 4;
       top: 70px;
       width: 100%;
-    }
-
-    .products-searchbar input {
-      width: 100%;
       height: 50px;
-      padding: 10px;
-      font-size: 16px;
-      font-family: 'Roboto', sans-serif;
-      text-align: left;
+      background: #333;
+      color: white;
+
+
+      .col-3 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+
+        h4 {
+          text-decoration: underline;
+        }
+      }
+
     }
-
-
-    .products-searchbar input:focus {
-      outline: none ! important;
-    }
-
-    .search-icon-container {
-      background: @themeColor3;
-      height: 52px;
-      padding: 10px;
-      text-align: center;
-      line-height: 50px;
-      cursor: pointer;
-    }
-
-    .search-icon-container:after {
-      font-family: FontAwesome;
-      content: '\f002';
-      font-size: 25px;
-    }
-
 
     //PRODUCT CARDS
     .products-container {

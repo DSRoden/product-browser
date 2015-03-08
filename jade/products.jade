@@ -1,7 +1,7 @@
 .products-page
   .products-navbar.col-group.no-padding
-    .col-mb-4.col-4
-      h3(ng-click="openFilter()") FILTER
+    .col-mb-4.col-4.col-filter
+      h3 FILTER
         i.fa.fa-filter.icons
     .col-mb-4.col-4
       h3(ng-click="resetFilters()") ALL 
@@ -10,14 +10,14 @@
       h3(ng-click="showBookmarked()") SAVED
         i.fa.fa-bookmark.icons
   .products-filterbar.col-group.no-padding
-    .col-mb-3
-      h4 Most Expensive
-    .col-mb-3
-      h4 Least Expensive
-    .col-mb-3
-      h4 Top Sellers
-    .col-mb-3
-      h4 Only Active
+    .col-mb-3.col-3
+      h4 $$$
+    .col-mb-3.col-3
+      h4 $
+    .col-mb-3.col-3
+      h4 Ratings
+    .col-mb-3.col-3
+      h4 Active
 
 
   //- .products-searchbar.col-group.no-padding
