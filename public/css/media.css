@@ -25,3 +25,22 @@
     margin-bottom: 20px ! important;
   }
 }
+
+
+@media all and (min-width: 375px) and (max-width: 667px) {
+  .col-mb-10 {
+    padding-left: 8% ! important;
+  }
+}
+
+@media all and (min-width: 417px) and (max-width: 736px) {
+  .col-mb-10 {
+    padding-left: 10% ! important;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .col-mb-10 {
+    padding-left: 6% ! important;
+  }
+}
