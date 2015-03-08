@@ -20,6 +20,9 @@
     .col-mb-1.col-1.no-padding
     .col-mb-10.col-10.no-padding
       .card(ng-repeat="product in products.products")
-        .front
-        .back
+        .card-content(ng-class="{flipIt : flip,  flipItBack : !flip}")
+          .front(ng-click="flip = true")
+            
+          .back(ng-click="flip = false")
+            
     .col-mb-1.col-1.no-padding

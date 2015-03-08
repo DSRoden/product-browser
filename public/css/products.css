@@ -1,5 +1,6 @@
 .products-page .products-navbar {
   position: fixed;
+  z-index: 4;
   top: 0;
   left: 0;
   right: 0;
@@ -20,6 +21,7 @@
 }
 .products-page .products-searchbar {
   position: fixed;
+  z-index: 4;
   top: 70px;
   width: 100%;
 }
@@ -30,6 +32,9 @@
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   text-align: left;
+}
+.products-page .products-searchbar input:focus {
+  outline: none ! important;
 }
 .products-page .search-icon-container {
   background: #f2ae72;
@@ -46,11 +51,45 @@
 }
 .products-page .products-container {
   margin-top: 150px;
+  /* flip the pane when clicked*/
+  /* flip the pane back when clicked*/
 }
 .products-page .products-container .card {
-  background: #588c7e;
   width: 250px;
   height: 300px;
   float: left;
   margin: 20px;
+  perspective: 1000;
+  /* front pane, placed above back */
+  /* back, initially hidden pane */
+}
+.products-page .products-container .card .card-content {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.products-page .products-container .card .front,
+.products-page .products-container .card .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+}
+.products-page .products-container .card .front {
+  z-index: 2;
+  /* for firefox 31 */
+  background: green;
+  transform: rotateY(0deg);
+}
+.products-page .products-container .card .back {
+  background: red;
+  transform: rotateY(180deg);
+}
+.products-page .products-container .flipIt {
+  transform: rotateY(180deg);
+}
+.products-page .products-container .flipItBack {
+  transform: rotateY(0deg);
 }
