@@ -6,8 +6,6 @@
     var scope = this;
     scope.title = 'products';
     scope.products = [];
-    scope.flip = false;
-    console.log(scope.flip);
 
     // INITIALIZE GET PRODUCTS FUNCTION
     scope.getProductInfo = function(){
@@ -18,8 +16,5 @@
     // GET PRODUCTS ON PAGE LOAD
     scope.getProductInfo();
 
-    scope.backFlip = function(){
-      scope.flip = false;
-    }
   }]);
 })();

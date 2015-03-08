@@ -1,5 +1,5 @@
-@themeColor1 : #588C7E;
-@themeColor2 : #F2E394;
+@themeColor1 : #171716;
+@themeColor2 : #0B0B0A;
 @themeColor3 : #F2AE72;
 
 
@@ -25,6 +25,7 @@
       line-height: 3em;
       font-size: 16px;
       text-align: center;
+      color: white;
     }
   }
 
@@ -99,6 +100,7 @@
         	/* for firefox 31 */
           background: green;
         	transform: rotateY(0deg);
+          padding: 5px;
         }
 
         /* back, initially hidden pane */
@@ -116,6 +118,74 @@
       .flipItBack {
     		transform: rotateY(0deg);
     	}
+
+      .front-content{
+        background: rgba(11, 11, 11, 0.8);
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .price {
+          position: absolute;
+          top: 40%;
+          left: 10%;
+          color: white;
+          border: 1px solid white;
+          padding: 20px;
+          cursor: pointer;
+
+        }
+
+        .bookmark-item {
+          position: absolute;
+          top: 45%;
+          right: 10%;
+          color: white;
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
+        .label {
+          position: absolute;
+          color: white;
+          font-familiy: 'Roboto', sans-serif;
+          text-align: left;
+          top: 0px;
+          left: 0;
+          right: 0;
+          padding: 10px;
+          background: @themeColor1;
+        }
+
+        .seller-name {
+          position: absolute;
+          color: white;
+          font-familiy: 'Roboto', sans-serif;
+          text-align: left;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+          height: 20px;
+          padding: 10px;
+          background: @themeColor1;
+        }
+
+        .seller-score {
+          position: absolute;
+          bottom: 30px;
+          color: yellow;
+          left: 0;
+          right: 0;
+          height: 30px;
+          padding: 10px;
+          background: @themeColor1;
+          text-align: left;
+        }
+      }
+
+
     }
 
 

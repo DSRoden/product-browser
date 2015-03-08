@@ -24,7 +24,17 @@
     <div class="col-mb-10 col-10 no-padding">
       <div ng-repeat="product in products.products" class="card">
         <div ng-class="{flipIt : flip,  flipItBack : !flip}" class="card-content">
-          <div ng-click="flip = true" class="front"></div>
+          <div style="background-image: url({{product.pictureURLLarge[0]}}); background-size: cover;" class="front">
+            <div class="front-content">
+              <div class="label">{{product.label}}</div>
+              <div ng-click="flip = true" class="price">{{product.sellingStatus[0].currentPrice[0].__value__ }} {{product.sellingStatus[0].currentPrice[0]['@currencyId']}} 
+                <div class="span">More info...</div>
+              </div>
+              <div ng-click="bookmarkItem(product)" class="bookmark-item fa fa-bookmark"></div>
+              <div class="seller-name">{{product.sellerInfo[0].sellerUserName[0]}}</div>
+              <div ng-show="product.sellerInfo[0].topRatedSeller[0]" class="seller-score fa fa-star">Top Seller</div>
+            </div>
+          </div>
           <div ng-click="flip = false" class="back"></div>
         </div>
       </div>
