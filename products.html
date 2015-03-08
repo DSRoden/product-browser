@@ -24,8 +24,32 @@
     <div class="col-mb-10 col-10 no-padding">
       <div ng-repeat="product in products.products" class="card">
         <div ng-class="{flipIt : flip,  flipItBack : !flip}" class="card-content">
-          <div ng-click="flip = true" class="front"></div>
-          <div ng-click="flip = false" class="back"></div>
+          <div style="background-image: url({{product.pictureURLLarge[0]}}); background-size: cover;" class="front">
+            <div class="front-content">
+              <div class="label">{{product.label}}</div>
+              <div ng-click="flip = true" class="price">{{product.sellingStatus[0].currentPrice[0].__value__ }} {{product.sellingStatus[0].currentPrice[0]['@currencyId']}} 
+                <div class="span">More info...</div>
+              </div>
+              <div ng-click="bookmarkItem(product)" class="bookmark-item fa fa-bookmark"></div>
+              <div class="seller-name">{{product.sellerInfo[0].sellerUserName[0]}}</div>
+              <div ng-show="product.sellerInfo[0].topRatedSeller[0]" class="seller-score fa fa-star">Top Seller</div>
+            </div>
+          </div>
+          <div class="back">
+            <div class="back-content">
+              <div ng-click="flip = false" class="go-back fa fa-caret-square-o-left"></div>
+              <div ng-click="bookmarItem(product)" class="bookmark-item-back fa fa-bookmark"></div>
+              <h4 ng-show="product.sellingStatus[0].sellingState[0]">Selling status: {{product.sellingStatus[0].sellingState[0]}}</h4>
+              <h4>Bids: {{product.sellingStatus[0].bidCount[0] || '0'}}</h4>
+              <h5>End date: {{product.listingInfo[0].endTime[0] | date : 'short'}}</h5>
+              <h5>Condition: {{product.condition[0].conditionDisplayName[0] || 'Unknown'}}</h5>
+              <h5>Location: {{product.location[0]}}</h5>
+              <h5>Payment method: {{product.paymentMethod[0]}}</h5>
+              <div ng-click="products.openItemUrl(product.viewItemURL[0])" class="link">
+                <h5>Link </h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

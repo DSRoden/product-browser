@@ -6,8 +6,6 @@
     var scope = this;
     scope.title = 'products';
     scope.products = [];
-    scope.flip = false;
-    console.log(scope.flip);
 
     // INITIALIZE GET PRODUCTS FUNCTION
     scope.getProductInfo = function(){
@@ -17,9 +15,12 @@
     };
     // GET PRODUCTS ON PAGE LOAD
     scope.getProductInfo();
+    // OPEN URL TO PRODUCT
+    scope.openItemUrl = function(url){
+      window.open(url, '_blank', 'location=yes');
+    };
 
-    scope.backFlip = function(){
-      scope.flip = false;
-    }
+
+
   }]);
 })();

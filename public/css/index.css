@@ -1,0 +1,16 @@
+body {
+  background: #0b0b0a;
+  margin: 0px;
+}
+.container {
+  max-width: 100% ! important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.no-padding {
+  padding: 0 ! important;
+}
+.icons {
+  font-size: 20px;
+  margin-left: 5px;
+}
