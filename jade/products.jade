@@ -9,11 +9,22 @@
     .col-mb-4.col-4
       h3(ng-click="showBookmarked()") SAVED
         i.fa.fa-bookmark.icons
-  .products-searchbar.col-group.no-padding
-    .col-mb-2.col-1.no-padding
-      .search-icon-container(ng-click="search(searchTerm)")
-    .col-mb-10.col-11.no-padding
-      input(type="text" placeholder="Search by product name" ng-model="searchTerm")
+  .products-filterbar.col-group.no-padding
+    .col-mb-3
+      h4 Most Expensive
+    .col-mb-3
+      h4 Least Expensive
+    .col-mb-3
+      h4 Top Sellers
+    .col-mb-3
+      h4 Only Active
+
+
+  //- .products-searchbar.col-group.no-padding
+  //-   .col-mb-2.col-1.no-padding
+  //-     .search-icon-container(ng-click="search(searchTerm)")
+  //-   .col-mb-10.col-11.no-padding
+  //-     input(type="text" placeholder="Search by product name" ng-model="searchTerm")
     
 
   .products-container.col-group

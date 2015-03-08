@@ -11,14 +11,21 @@
       <h3 ng-click="showBookmarked()">SAVED<i class="fa fa-bookmark icons"></i></h3>
     </div>
   </div>
-  <div class="products-searchbar col-group no-padding">
-    <div class="col-mb-2 col-1 no-padding">
-      <div ng-click="search(searchTerm)" class="search-icon-container"></div>
+  <div class="products-filterbar col-group no-padding">
+    <div class="col-mb-3">
+      <h4>Most Expensive</h4>
     </div>
-    <div class="col-mb-10 col-11 no-padding">
-      <input type="text" placeholder="Search by product name" ng-model="searchTerm">
+    <div class="col-mb-3">
+      <h4>Least Expensive</h4>
+    </div>
+    <div class="col-mb-3">
+      <h4>Top Sellers</h4>
+    </div>
+    <div class="col-mb-3">
+      <h4>Only Active</h4>
     </div>
   </div>
+  
   <div class="products-container col-group">
     <div class="col-mb-1 col-1 no-padding"></div>
     <div class="col-mb-10 col-10 no-padding">
