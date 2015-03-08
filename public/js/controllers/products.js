@@ -49,7 +49,9 @@
       });
       // recreate the array in a timeout due to http request
       $timeout(function(){
-        scope.products = scope.tempArray;
+        if(scope.bookmarks.length > 0){
+          scope.products = scope.tempArray;
+        }
       }, 1000);
     };
 
