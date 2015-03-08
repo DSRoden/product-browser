@@ -30,4 +30,14 @@
   .search-icon-container:after {
     font-size: 16px !important;
   }
+  .products-container {
+    background: #f2ae72;
+  }
+  .products-container .card {
+    background: #588c7e;
+    width: 250px;
+    height: 300px;
+    float: none ! important;
+    margin: 10px ! important;
+  }
 }

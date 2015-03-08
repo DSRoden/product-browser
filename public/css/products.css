@@ -40,3 +40,13 @@
   content: '\f002';
   font-size: 25px;
 }
+.products-page .products-container {
+  background: #f2e394;
+}
+.products-page .products-container .card {
+  background: #588c7e;
+  width: 250px;
+  height: 300px;
+  float: left;
+  margin: 20px;
+}

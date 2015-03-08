@@ -5,7 +5,7 @@
   .controller('ProductsCtrl', ['$scope', '$timeout', '$location', '$state', 'Product', function($scope, $timeout, $location, $state, Product){
     var scope = this;
     scope.title = 'products';
-    scope.products = {};
+    scope.products = [];
 
     // INITIALIZE GET PRODUCTS FUNCTION
     scope.getProductInfo = function(){

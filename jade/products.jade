@@ -16,4 +16,10 @@
       input(type="text" placeholder="Search by product name" ng-model="searchTerm")
     
 
-  .products-container
+  .products-container.col-group
+    .col-mb-1.col-1.no-padding
+    .col-mb-10.col-10.no-padding
+      .card(ng-repeat="product in products.products")
+        .front
+        .back
+    .col-mb-1.col-1.no-padding

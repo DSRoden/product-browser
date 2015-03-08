@@ -19,5 +19,14 @@
       <input type="text" placeholder="Search by product name" ng-model="searchTerm">
     </div>
   </div>
-  <div class="products-container"></div>
+  <div class="products-container col-group">
+    <div class="col-mb-1 col-1 no-padding"></div>
+    <div class="col-mb-10 col-10 no-padding">
+      <div ng-repeat="product in products.products" class="card">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+    </div>
+    <div class="col-mb-1 col-1 no-padding"></div>
+  </div>
 </div>
