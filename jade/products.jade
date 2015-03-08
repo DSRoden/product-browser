@@ -1,4 +1,4 @@
-.products-page
+.products-page.fadeIn.fadeOut
   .products-navbar.col-group.no-padding
     .col-mb-4.col-4.col-filter
       h3 FILTER
@@ -20,7 +20,7 @@
   .products-container.col-group(ng-hide="products.bookmarkedProducts")
     .col-mb-1.col-1.no-padding
     .col-mb-10.col-10.no-padding
-      .card.fadeIn.fadeOut(ng-repeat="product in products.products | orderBy:predicate:reverse")
+      .card.staggerFadeIn(ng-repeat="product in products.products | orderBy:predicate:reverse")
         .card-content(ng-class="{flipIt : flip,  flipItBack : !flip}")
           //- FRONT OF CARD
           .front(style="background-image: url({{product.pictureURLLarge[0]}}); background-size: cover;")
@@ -35,7 +35,7 @@
           .back
             .back-content
               .go-back.fa.fa-caret-square-o-left(ng-click="flip = false")
-              .bookmark-item-back.fa.fa-bookmark(ng-click="products.bookmarItem(product)")
+              .bookmark-item-back.fa.fa-bookmark(ng-click="products.bookmarkItem(product)")
               h4(ng-show="product.sellingStatus[0].sellingState[0]") Selling status: {{product.sellingStatus[0].sellingState[0]}}
               h4 Bids: {{product.sellingStatus[0].bidCount[0] || '0'}}
               h5 End date: {{product.listingInfo[0].endTime[0] | date : 'short'}}
@@ -49,7 +49,7 @@
   .products-container.col-group(ng-show="products.bookmarkedProducts")
     .col-mb-1.col-1.no-padding
     .col-mb-10.col-10.no-padding
-      .card(ng-repeat="product in products.bookmarks | orderBy:predicate:reverse").fadeIn.fadeOut
+      .card.fadeIn.fadeOut(ng-repeat="product in products.bookmarks | orderBy:predicate:reverse")
         .card-content(ng-class="{flipIt : flip,  flipItBack : !flip}")
           //- FRONT OF CARD
           .front(style="background-image: url({{product.pictureURLLarge[0]}}); background-size: cover;")
@@ -57,14 +57,12 @@
               .label {{product.label}}
               .price(ng-click="flip = true") {{product.sellingStatus[0].currentPrice[0].__value__ }} {{product.sellingStatus[0].currentPrice[0]['@currencyId']}} 
                 .span More info...
-              .bookmark-item.fa.fa-bookmark(ng-click="products.bookmarkItem(product)")
               .seller-name {{product.sellerInfo[0].sellerUserName[0]}}
               .seller-score.fa.fa-star(ng-show="product.sellerInfo[0].topRatedSeller[0]") Top Seller
           //- BACK OF CARD
           .back
             .back-content
               .go-back.fa.fa-caret-square-o-left(ng-click="flip = false")
-              .bookmark-item-back.fa.fa-bookmark(ng-click="products.bookmarItem(product)")
               h4(ng-show="product.sellingStatus[0].sellingState[0]") Selling status: {{product.sellingStatus[0].sellingState[0]}}
               h4 Bids: {{product.sellingStatus[0].bidCount[0] || '0'}}
               h5 End date: {{product.listingInfo[0].endTime[0] | date : 'short'}}

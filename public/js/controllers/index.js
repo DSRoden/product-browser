@@ -8,9 +8,6 @@
     $stateProvider
     .state('apps',     {url:'/',         templateUrl:'/products.html', controller:'ProductsCtrl', controllerAs: 'products'});
   }])
-  .controller('IndexCtrl', ['$scope', '$state', function($scope, $state){
-
-    $scope.mode = $state.current.name;
-
+  .controller('IndexCtrl', ['$scope', function($scope){
   }]);
 })();

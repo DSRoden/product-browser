@@ -1,0 +1,28 @@
+.staggerFadeIn.ng-enter {
+  transition: 1s;
+  opacity: 0;
+}
+.staggerFadeIn.ng-enter-stagger {
+  transition-delay: 0.1s;
+}
+.staggerFadeIn.ng-enter-active {
+  opacity: 1;
+}
+.staggerFadeIn.ng-leave-active {
+  transition: 0.6s;
+  opacity: 0;
+}
+.fadeIn.ng-enter {
+  transition: 3s;
+  opacity: 0;
+}
+.fadeIn.ng-enter-active {
+  opacity: 1;
+}
+.fadeOut.ng-leave {
+  transition: 3s;
+  opacity: 1;
+}
+.fadeOut.ng-leave-active {
+  opacity: 0;
+}
