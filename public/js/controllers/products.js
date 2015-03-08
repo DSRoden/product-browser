@@ -15,6 +15,12 @@
     };
     // GET PRODUCTS ON PAGE LOAD
     scope.getProductInfo();
+    // OPEN URL TO PRODUCT
+    scope.openItemUrl = function(url){
+      window.open(url, '_blank', 'location=yes');
+    };
+
+
 
   }]);
 })();

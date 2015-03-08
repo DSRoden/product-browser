@@ -39,7 +39,7 @@
 }
 .products-page .search-icon-container {
   background: #f2ae72;
-  height: 51px;
+  height: 52px;
   padding: 10px;
   text-align: center;
   line-height: 50px;
@@ -86,7 +86,8 @@
   padding: 5px;
 }
 .products-page .products-container .card .back {
-  background: red;
+  background: white;
+  border: 5px solid #f2ae72;
   transform: rotateY(180deg);
 }
 .products-page .products-container .flipIt {
@@ -110,6 +111,9 @@
   padding: 20px;
   cursor: pointer;
 }
+.products-page .products-container .front-content .price:hover {
+  background: #171716;
+}
 .products-page .products-container .front-content .bookmark-item {
   position: absolute;
   top: 45%;
@@ -119,6 +123,9 @@
   border: 1px solid white;
   border-radius: 100%;
   cursor: pointer;
+}
+.products-page .products-container .front-content .bookmark-item:hover {
+  background: #171716;
 }
 .products-page .products-container .front-content .label {
   position: absolute;
@@ -153,4 +160,40 @@
   padding: 10px;
   background: #171716;
   text-align: left;
+}
+.products-page .products-container .back-content {
+  padding: 15px;
+  position: relative;
+}
+.products-page .products-container .back-content h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+.products-page .products-container .back-content .link {
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  cursor: pointer;
+}
+.products-page .products-container .back-content .link h5 {
+  margin-top: 10px;
+}
+.products-page .products-container .back-content .link:hover {
+  background: black;
+  color: white;
+}
+.products-page .products-container .back-content .go-back {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.products-page .products-container .back-content .bookmark-item-back {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
 }

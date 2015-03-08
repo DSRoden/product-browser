@@ -21,6 +21,7 @@
     .col-mb-10.col-10.no-padding
       .card(ng-repeat="product in products.products")
         .card-content(ng-class="{flipIt : flip,  flipItBack : !flip}")
+          //- FRONT OF CARD
           .front(style="background-image: url({{product.pictureURLLarge[0]}}); background-size: cover;")
             .front-content
               .label {{product.label}}
@@ -29,6 +30,17 @@
               .bookmark-item.fa.fa-bookmark(ng-click="bookmarkItem(product)")
               .seller-name {{product.sellerInfo[0].sellerUserName[0]}}
               .seller-score.fa.fa-star(ng-show="product.sellerInfo[0].topRatedSeller[0]") Top Seller
-          .back(ng-click="flip = false")
-            
+          //- BACK OF CARD
+          .back
+            .back-content
+              .go-back.fa.fa-caret-square-o-left(ng-click="flip = false")
+              .bookmark-item-back.fa.fa-bookmark(ng-click="bookmarItem(product)")
+              h4(ng-show="product.sellingStatus[0].sellingState[0]") Selling status: {{product.sellingStatus[0].sellingState[0]}}
+              h4 Bids: {{product.sellingStatus[0].bidCount[0] || '0'}}
+              h5 End date: {{product.listingInfo[0].endTime[0] | date : 'short'}}
+              h5 Condition: {{product.condition[0].conditionDisplayName[0] || 'Unknown'}}
+              h5 Location: {{product.location[0]}}
+              h5 Payment method: {{product.paymentMethod[0]}}
+              .link(ng-click="products.openItemUrl(product.viewItemURL[0])")
+                h5 Link 
     .col-mb-1.col-1.no-padding
