@@ -9,18 +9,18 @@
     .col-mb-4.col-4
       h3(ng-click="products.bookmarkedProducts = true") SAVED
         i.fa.fa-bookmark.icons
-  //- .products-filterbar.col-group.no-padding
-  //-   .col-mb-4.col-4
-  //-     h4(ng-click="reverse=!reverse; products.order('__value__', reverse)") $
-  //-   .col-mb-4.col-4
-  //-     h4(ng-click="products.highestUserRating()") Ratings
-  //-   .col-mb-4.col-4
-  //-     h4(ng-click="predicate = 'bidCount[0]'; reverse=!reverse") Bids
+  .products-filterbar.col-group.no-padding
+    .col-mb-4.col-4
+      h4(ng-click="products.sortByPriceDesc()") $$$
+    .col-mb-4.col-4
+      h4(ng-click="products.highestUserRating()") Ratings
+    .col-mb-4.col-4
+      h4(ng-click="products.highestNumBids()") Bids
 
   .products-container.col-group(ng-hide="products.bookmarkedProducts")
     .col-mb-1.col-1.no-padding
     .col-mb-10.col-10.no-padding
-      .card.staggerFadeIn(ng-repeat="product in products.products | orderBy:predicate:reverse")
+      .card.staggerFadeIn(ng-repeat="product in products.products track by $index")
         .card-content(ng-class="{flipIt : flip,  flipItBack : !flip}")
           //- FRONT OF CARD
           .front(style="background-image: url({{product.pictureURLLarge[0]}}); background-size: cover;")

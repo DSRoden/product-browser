@@ -38,6 +38,38 @@
       scope.bookmarkedProducts = false;
     };
 
+
+    //SORT BY PRICE
+    scope.sortByPriceDesc = function(){
+      scope.priceDesc = _.sortBy(scope.products, function(product){
+        return parseInt(product.sellingStatus[0].convertedCurrentPrice[0].__value__);
+      });
+      scope.products = scope.priceDesc.reverse();
+    };
+    
+
+    //FILTER TOP SELLERS
+    scope.highestUserRating = function(){
+      scope.topSellers = _.filter(scope.products, function(product){
+        return product.sellerInfo[0].topRatedSeller[0] === "true";
+      });
+      scope.products = scope.topSellers;
+    };
+
+
+    //HIGHEST NUMBER OF BIDS
+    scope.highestNumBids = function(){
+      scope.itemsWithBids = _.filter(scope.products, function(product){
+        return product.sellingStatus[0].bidCount;
+      });
+      // sort new array
+      scope.sortedByBids = _.sortBy(scope.itemsWithBids, function(product){
+        return parseInt(product.sellingStatus[0].bidCount[0]);
+      });
+      
+      scope.products = scope.sortedByBids.reverse();
+    };
+    
     // //ORDER FUNCTION
     // scope.order = function(predicate, reverse){
     //   console.log('trying to create order');
