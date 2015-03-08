@@ -28,16 +28,16 @@
       });
       if(exists){ return;
       } else {
+        product.bookmarked = true;
         scope.bookmarks.push(product);
       }
     };
 
-    //RESET ALL
+    //RESET TO ALL
     scope.resetFilters = function(){
       scope.getProductInfo();
       scope.bookmarkedProducts = false;
     };
-
 
     //SORT BY PRICE
     scope.sortByPriceDesc = function(){
@@ -46,7 +46,6 @@
       });
       scope.products = scope.priceDesc.reverse();
     };
-    
 
     //FILTER TOP SELLERS
     scope.highestUserRating = function(){
@@ -55,7 +54,6 @@
       });
       scope.products = scope.topSellers;
     };
-
 
     //HIGHEST NUMBER OF BIDS
     scope.highestNumBids = function(){
@@ -66,15 +64,7 @@
       scope.sortedByBids = _.sortBy(scope.itemsWithBids, function(product){
         return parseInt(product.sellingStatus[0].bidCount[0]);
       });
-      
       scope.products = scope.sortedByBids.reverse();
     };
-    
-    // //ORDER FUNCTION
-    // scope.order = function(predicate, reverse){
-    //   console.log('trying to create order');
-    //   scope.products = orderBy(scope.products, predicate, reverse);
-    //   console.log(scope.products);
-    // };
   }]);
 })();

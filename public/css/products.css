@@ -190,3 +190,9 @@
   font-size: 30px;
   cursor: pointer;
 }
+.bookmarked {
+  background: #f2ae72;
+}
+.bookmarkedIcon {
+  color: #f2ae72;
+}
