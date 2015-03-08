@@ -1,4 +1,6 @@
+//- FADES IN
 .products-page.fadeIn.fadeOut
+  //- NAVBAR
   .products-navbar.col-group.no-padding
     .col-mb-4.col-4.col-filter
       h3 FILTER
@@ -9,6 +11,7 @@
     .col-mb-4.col-4
       h3(ng-click="products.bookmarkedProducts = true") SAVED
         i.fa.fa-bookmark.icons
+  //- FILTER BAR
   .products-filterbar.col-group.no-padding
     .col-mb-4.col-4
       h4(ng-click="products.sortByPriceDesc()") $$$
@@ -17,6 +20,7 @@
     .col-mb-4.col-4
       h4(ng-click="products.highestNumBids()") Bids
 
+  //- DISPLAYING PRODUCTS AS CARDS 
   .products-container.col-group(ng-hide="products.bookmarkedProducts")
     .col-mb-1.col-1.no-padding
     .col-mb-10.col-10.no-padding
@@ -46,6 +50,7 @@
                 h5 Link 
     .col-mb-1.col-1.no-padding
 
+  //- BOOKMARKED PRODUCTS ALSO DISPLAYED AS CARDS
   .products-container.col-group(ng-show="products.bookmarkedProducts")
     .col-mb-1.col-1.no-padding
     .col-mb-10.col-10.no-padding
