@@ -9,13 +9,13 @@
     .col-mb-4.col-4
       h3(ng-click="products.bookmarkedProducts = true") SAVED
         i.fa.fa-bookmark.icons
-  .products-filterbar.col-group.no-padding
-    .col-mb-4.col-4
-      h4(ng-click="reverse=!reverse; products.order('__value__', reverse)") $
-    .col-mb-4.col-4
-      h4(ng-click="products.highestUserRating()") Ratings
-    .col-mb-4.col-4
-      h4(ng-click="predicate = 'bidCount[0]'; reverse=!reverse") Bids
+  //- .products-filterbar.col-group.no-padding
+  //-   .col-mb-4.col-4
+  //-     h4(ng-click="reverse=!reverse; products.order('__value__', reverse)") $
+  //-   .col-mb-4.col-4
+  //-     h4(ng-click="products.highestUserRating()") Ratings
+  //-   .col-mb-4.col-4
+  //-     h4(ng-click="predicate = 'bidCount[0]'; reverse=!reverse") Bids
 
   .products-container.col-group(ng-hide="products.bookmarkedProducts")
     .col-mb-1.col-1.no-padding

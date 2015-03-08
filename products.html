@@ -11,17 +11,6 @@
       <h3 ng-click="products.bookmarkedProducts = true">SAVED<i class="fa fa-bookmark icons"></i></h3>
     </div>
   </div>
-  <div class="products-filterbar col-group no-padding">
-    <div class="col-mb-4 col-4">
-      <h4 ng-click="reverse=!reverse; products.order('__value__', reverse)">$</h4>
-    </div>
-    <div class="col-mb-4 col-4">
-      <h4 ng-click="products.highestUserRating()">Ratings</h4>
-    </div>
-    <div class="col-mb-4 col-4">
-      <h4 ng-click="predicate = 'bidCount[0]'; reverse=!reverse">Bids</h4>
-    </div>
-  </div>
   <div ng-hide="products.bookmarkedProducts" class="products-container col-group">
     <div class="col-mb-1 col-1 no-padding"></div>
     <div class="col-mb-10 col-10 no-padding">
