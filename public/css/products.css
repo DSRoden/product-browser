@@ -18,8 +18,12 @@
   font-size: 16px;
   text-align: center;
 }
+.products-page .products-searchbar {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+}
 .products-page .products-searchbar input {
-  margin-top: 70px;
   width: 100%;
   height: 50px;
   padding: 10px;
@@ -28,8 +32,7 @@
   text-align: left;
 }
 .products-page .search-icon-container {
-  margin-top: 70px;
-  background: #f2e394;
+  background: #f2ae72;
   height: 51px;
   padding: 10px;
   text-align: center;
@@ -42,7 +45,7 @@
   font-size: 25px;
 }
 .products-page .products-container {
-  background: #f2e394;
+  margin-top: 150px;
 }
 .products-page .products-container .card {
   background: #588c7e;
